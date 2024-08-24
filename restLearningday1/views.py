@@ -6,3 +6,5 @@ def Home(request):
     drinks = Drink.objects.all()
     serializers = Drinkserializer(drinks, many=True)
     return JsonResponse(serializers.data, safe=False)
+
+
